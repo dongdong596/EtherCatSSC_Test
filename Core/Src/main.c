@@ -23,6 +23,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "AX58100.h"
 
 /* USER CODE END Includes */
 
@@ -33,6 +34,9 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+#ifndef AX58100_SELF_TEST_ENABLE
+#define AX58100_SELF_TEST_ENABLE  0
+#endif
 
 /* USER CODE END PD */
 
@@ -89,7 +93,9 @@ int main(void)
   MX_GPIO_Init();
   MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
-
+  #if AX58100_SELF_TEST_ENABLE
+  AX58100_SelfTest();
+  #endif
   /* USER CODE END 2 */
 
   /* Infinite loop */
