@@ -33,7 +33,6 @@ extern "C" {
 /* USER CODE BEGIN Includes */
 #include "spi.h"
 #include "gpio.h"
-#include "AX58100.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/

@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F103xB</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F1xx/Include;../Drivers/CMSIS/Include;../Bsp/Inc</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F1xx/Include;../Drivers/CMSIS/Include;../Bsp/Inc;..\Middleware\ssc_gener</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -508,6 +508,51 @@
               <FileName>Esc_hw.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Bsp\Src\Esc_hw.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Middleware/SSC</GroupName>
+          <Files>
+            <File>
+              <FileName>coeappl.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middleware\ssc_gener\coeappl.c</FilePath>
+            </File>
+            <File>
+              <FileName>ecatappl.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middleware\ssc_gener\ecatappl.c</FilePath>
+            </File>
+            <File>
+              <FileName>ecatcoe.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middleware\ssc_gener\ecatcoe.c</FilePath>
+            </File>
+            <File>
+              <FileName>ecatslv.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middleware\ssc_gener\ecatslv.c</FilePath>
+            </File>
+            <File>
+              <FileName>mailbox.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middleware\ssc_gener\mailbox.c</FilePath>
+            </File>
+            <File>
+              <FileName>objdef.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middleware\ssc_gener\objdef.c</FilePath>
+            </File>
+            <File>
+              <FileName>sampleappl.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middleware\ssc_gener\sampleappl.c</FilePath>
+            </File>
+            <File>
+              <FileName>sdoserv.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middleware\ssc_gener\sdoserv.c</FilePath>
             </File>
           </Files>
         </Group>

@@ -24,7 +24,8 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "AX58100.h"
-
+#include "Esc_hw.h"
+#include "applInterface.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -96,12 +97,14 @@ int main(void)
   #if AX58100_SELF_TEST_ENABLE
   AX58100_SelfTest();
   #endif
+  MainInit();
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+    MainLoop();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
