@@ -94,6 +94,15 @@ int main(void)
   MX_GPIO_Init();
   MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
+  // 等待AX58100就绪，否则无法正常进入OP
+  if (!AX58100_WaitReady(3000))
+  {
+      while (1)
+      {
+          /* AX58100 not ready */
+      }
+  }
+
   #if AX58100_SELF_TEST_ENABLE
   AX58100_SelfTest();
   #endif

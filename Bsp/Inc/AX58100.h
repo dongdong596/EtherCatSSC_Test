@@ -37,6 +37,7 @@ void AX58100_Write32(uint16_t addr, uint32_t value);
 
 void AX58100_ReadBuffer(uint16_t addr, uint8_t *buf, uint16_t len);
 void AX58100_WriteBuffer(uint16_t addr, const uint8_t *buf, uint16_t len);
+uint8_t AX58100_WaitReady(uint32_t timeoutMs);
 
 uint16_t AX58100_GetALEvent(void);
 void AX58100_SelfTest(void);

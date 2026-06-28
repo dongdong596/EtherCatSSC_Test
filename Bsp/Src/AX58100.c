@@ -141,6 +141,30 @@ uint16_t AX58100_GetALEvent(void)
     return AX58100_Read16(AX58100_REG_AL_EVENT);
 }
 
+uint8_t AX58100_WaitReady(uint32_t timeoutMs)
+{
+    uint32_t start = HAL_GetTick();
+
+    while ((HAL_GetTick() - start) < timeoutMs)
+    {
+        uint8_t smCount = AX58100_Read8(0x0005);
+        uint16_t dpramSize = AX58100_Read16(0x0006);
+        uint16_t eepromStatus = AX58100_Read16(0x0502);
+
+        if (smCount >= 4 &&
+            dpramSize != 0 &&
+            !(eepromStatus & 0x8000) &&
+            !(eepromStatus & 0x1800))
+        {
+            return 1;
+        }
+
+        HAL_Delay(10);
+    }
+
+    return 0;
+}
+
 static uint8_t AX58100_TestMemory(uint16_t addr, uint16_t len, uint8_t seed)
 {
     uint16_t i;

@@ -38,7 +38,8 @@ V5.0: file created
 #define _SAMPLE_APPLICATION_
 #include "sampleappl.h"
 #undef _SAMPLE_APPLICATION_
-
+#include "Led.h"
+#include "swInput.h"
 
 /*--------------------------------------------------------------------------------------
 ------
@@ -267,6 +268,7 @@ UINT16 APPL_GenerateMapping(UINT16 *pInputSize,UINT16 *pOutputSize)
 *////////////////////////////////////////////////////////////////////////////////////////
 void APPL_InputMapping(UINT16* pData)
 {
+    InputCounter = (UINT32)BSP_SWInput_ReadMask();
 /*ECATCHANGE_START(V5.11) ECAT4*/
     MEMCPY(pData,&InputCounter,SIZEOF(InputCounter));
 /*ECATCHANGE_END(V5.11) ECAT4*/
@@ -284,6 +286,7 @@ void APPL_OutputMapping(UINT16* pData)
 /*ECATCHANGE_START(V5.11) ECAT4*/
     MEMCPY(&OutputCounter,pData,SIZEOF(OutputCounter));
 /*ECATCHANGE_END(V5.11) ECAT4*/
+    BSP_LED_WriteMask((uint16_t)OutputCounter);
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////
@@ -295,14 +298,16 @@ void APPL_Application(void)
 {
 /*ECATCHANGE_START(V5.11) ECAT4*/
     /*Hardware independent sample application*/
-    if(OutputCounter > 0)
-    {
-        InputCounter = OutputCounter+1;
-    }
-    else
-    {
-        InputCounter++;
-    }
+    // if(OutputCounter > 0)
+    // {
+    //     InputCounter = OutputCounter+1;
+    // }
+    // else
+    // {
+    //     InputCounter++;
+    // }
+    InputCounter = (UINT32)BSP_SWInput_ReadMask();
+    BSP_LED_WriteMask((uint16_t)OutputCounter);
 /*ECATCHANGE_END(V5.11) ECAT4*/
 }
 

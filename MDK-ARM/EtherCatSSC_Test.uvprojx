@@ -497,21 +497,6 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>Bsp</GroupName>
-          <Files>
-            <File>
-              <FileName>AX58100.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Bsp\Src\AX58100.c</FilePath>
-            </File>
-            <File>
-              <FileName>Esc_hw.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Bsp\Src\Esc_hw.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
           <GroupName>Middleware/SSC</GroupName>
           <Files>
             <File>
@@ -553,6 +538,31 @@
               <FileName>sdoserv.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Middleware\ssc_gener\sdoserv.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Bsp</GroupName>
+          <Files>
+            <File>
+              <FileName>AX58100.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Bsp\Src\AX58100.c</FilePath>
+            </File>
+            <File>
+              <FileName>Esc_hw.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Bsp\Src\Esc_hw.c</FilePath>
+            </File>
+            <File>
+              <FileName>Led.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Bsp\Src\Led.c</FilePath>
+            </File>
+            <File>
+              <FileName>swInput.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Bsp\Src\swInput.c</FilePath>
             </File>
           </Files>
         </Group>

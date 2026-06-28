@@ -809,7 +809,7 @@ VENDOR_ID: Object 0x1018 SI1 (Vendor ID)	 <br>
 An unique EtherCAT Vendor ID is required. Please find all valid Vendor IDs listed at www.ethercat.org/en/vendor_id_list.html.<br>
 If your company is not listed, please assign an ID for free at www.ethercat.org/memberarea/vendor_id.asp */
 #ifndef VENDOR_ID
-#define VENDOR_ID                                 0x00000A88
+#define VENDOR_ID                                 0x111
 #endif
 
 /** 
@@ -883,7 +883,7 @@ inside the application memory of the EtherCAT Slave Controller which could be se
 MAX_PD_WRITE_ADDRESS: Maximum address for the process output data (Sync Manager 2)<br>
 inside the application memory of the EtherCAT Slave Controller which could be set by the master. The setting have to be within the ranges of the user memory of the ESC (this is not checked by the tool). */
 #ifndef MAX_PD_WRITE_ADDRESS
-#define MAX_PD_WRITE_ADDRESS                      0x2FFF
+#define MAX_PD_WRITE_ADDRESS                      0x111F
 #endif
 
 /** 
@@ -897,7 +897,7 @@ inside the application memory of the EtherCAT Slave Controller which could be se
 MAX_PD_READ_ADDRESS: Maximum address for the process input data (Sync Manager 3)<br>
 inside the application memory of the EtherCAT Slave Controller which could be set by the master. The setting have to be within the ranges of the user memory of the ESC (this is not checked by the tool). */
 #ifndef MAX_PD_READ_ADDRESS
-#define MAX_PD_READ_ADDRESS                       0x2FFF
+#define MAX_PD_READ_ADDRESS                       0x113F
 #endif
 
 /** 
@@ -921,7 +921,7 @@ MIN_MBX_WRITE_ADDRESS: Minimum address for the write (receive) mailbox (Sync Man
 /** 
 MAX_MBX_WRITE_ADDRESS: Maximum address for the write (receive) mailbox (Sync Manager 0). The setting have to be within the ranges of the user memory of the ESC (this is not checked by the tool). */
 #ifndef MAX_MBX_WRITE_ADDRESS
-#define MAX_MBX_WRITE_ADDRESS                     0x2FFF
+#define MAX_MBX_WRITE_ADDRESS                     0x107F
 #endif
 
 /** 
@@ -939,7 +939,7 @@ MIN_MBX_READ_ADDRESS: Minimum address for the read (send) mailbox (Sync Manager 
 /** 
 MAX_MBX_READ_ADDRESS: Maximum address for the read (send) mailbox (Sync Manager 1). */
 #ifndef MAX_MBX_READ_ADDRESS
-#define MAX_MBX_READ_ADDRESS                      0x2FFF
+#define MAX_MBX_READ_ADDRESS                      0x10FF
 #endif
 
 /** 
